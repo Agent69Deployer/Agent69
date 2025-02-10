@@ -1,0 +1,261 @@
+/**
+ * App.css
+ */
+ @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+ body {
+   margin: 0;
+   padding: 0;
+   background-color: #1c1c1c;
+   font-family: 'Orbitron', sans-serif;
+   color: #ffffff;
+ }
+ 
+ /* Main container */
+ .App {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 40px 20px;
+ }
+ 
+ /* Header area */
+ .headerArea {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 25px;
+ }
+ .headerArea .logo {
+   height: 60px;
+   width: 60px;
+   margin-right: 15px;
+ }
+ .headerArea h1 {
+   font-size: 2.2rem;
+   margin: 0;
+   color: #35dae2;
+   text-shadow: 0 0 8px #35dae2;
+ }
+ 
+ /* Subtitle */
+ .subtitle {
+   text-align: center;
+   color: #9e9e9e;
+   margin-bottom: 30px;
+   font-size: 1rem;
+ }
+ 
+ /* Buttons */
+ button {
+   background-color: #35dae2;
+   border: none;
+   color: #ffffff;
+   padding: 10px 14px;
+   font-size: 0.95rem;
+   font-family: 'Orbitron', sans-serif;
+   cursor: pointer;
+   transition: 0.2s ease;
+   border-radius: 4px;
+   text-transform: uppercase;
+   margin-right: 5px;
+   margin-top: 5px;
+ }
+ button:disabled {
+   opacity: 0.5;
+   cursor: not-allowed;
+ }
+ button:hover:enabled {
+   background-color: #21a7b1;
+ }
+ 
+ /* No agents box */
+ .noAgentsBox {
+   text-align: center;
+   margin-bottom: 30px;
+   padding: 20px;
+   border: 2px dashed #35dae2;
+   border-radius: 6px;
+ }
+ 
+ /* Agent list */
+ .agentList {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+   justify-content: center;
+ }
+ 
+ /* Agent card */
+ .agentCard {
+   background-color: #2c2c2c;
+   border: 2px solid #35dae2;
+   border-radius: 8px;
+   padding: 20px;
+   width: 450px; 
+   box-shadow: 0 0 8px #35dae2;
+   position: relative;
+ }
+ 
+ /* Card header */
+ .cardHeader {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 15px;
+ }
+ 
+ .agentNameInput {
+   font-size: 1.1rem;
+   font-weight: bold;
+   color: #ffffff;
+   text-shadow: 0 0 5px #35dae2;
+   background-color: transparent;
+   border: none;
+   outline: none;
+   width: 60%;
+   border-bottom: 2px solid #35dae2;
+   padding: 4px;
+   margin-right: 10px;
+   font-family: 'Orbitron', sans-serif;
+ }
+ .agentNameInput::placeholder {
+   color: #aaaaaa;
+ }
+ .agentNameInput:focus {
+   background-color: #1c1c1c;
+ }
+ 
+ .agentActions {
+   display: flex;
+   gap: 8px;
+ }
+ 
+ /* Agent fields */
+ .agentFields {
+   text-align: center;
+ }
+ 
+ .agentFields label {
+   display: block;
+   margin-top: 15px;
+   font-size: 0.9rem;
+   font-weight: 700;
+   color: #dddddd;
+   text-align: center;
+ }
+ 
+ .agentFields input,
+ .agentFields textarea,
+ .agentFields select {
+   width: 80%;
+   margin: 8px auto 0 auto;
+   padding: 8px;
+   border: 1px solid #4c4c4c;
+   border-radius: 4px;
+   background-color: #1d1d1d;
+   color: #eaeaea;
+   font-family: 'Orbitron', sans-serif;
+   outline: none;
+   display: block;
+ }
+ .agentFields input:focus,
+ .agentFields textarea:focus,
+ .agentFields select:focus {
+   border-color: #35dae2;
+   box-shadow: 0 0 4px #35dae2;
+ }
+ 
+ /* Twitter connect box */
+ .twitterConnect {
+   margin: 10px 0;
+   background-color: #3c3c3c;
+   padding: 10px;
+   border-radius: 4px;
+ }
+ .connectedBox {
+   margin: 10px 0;
+   background-color: #004f56;
+   padding: 10px;
+   border-radius: 4px;
+ }
+ 
+ /* Info icon */
+ .infoIcon {
+   cursor: help;
+   color: #35dae2;
+   font-weight: bold;
+   margin-left: 5px;
+ }
+ 
+ /* Warning text */
+ .warningText {
+   color: #fbc02d;
+   font-size: 0.9rem;
+   margin-top: 10px;
+ }
+ 
+ /* Create agent area */
+ .createAgentArea {
+   text-align: center;
+   margin-top: 20px;
+ }
+ 
+ /* FAQ section */
+ .faqSection {
+   margin-top: 40px;
+   padding: 20px;
+   border-top: 2px solid #35dae2;
+ }
+ .faqSection h2 {
+   text-align: center;
+   margin-bottom: 20px;
+ }
+ .faqItem {
+   margin-bottom: 15px;
+ }
+ .faqItem h3 {
+   margin-bottom: 5px;
+ }
+ .faqItem p {
+   margin: 0;
+   color: #cccccc;
+ }
+ .faqItem a {
+   color: #35dae2;
+   text-decoration: none;
+ }
+ .faqItem a:hover {
+   text-decoration: underline;
+ }
+ 
+ /* Popup styles */
+ .popupOverlay {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: rgba(0,0,0,0.7);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: 9999;
+ }
+ .popupContent {
+   background-color: #2c2c2c;
+   border: 2px solid #35dae2;
+   border-radius: 8px;
+   padding: 20px;
+   width: 300px;
+   text-align: center;
+ }
+ .popupContent p {
+   margin: 0 0 20px 0;
+   font-size: 1rem;
+ }
+ .popupButtons {
+   display: flex;
+   justify-content: center;
+   gap: 10px;
+ }
+ 
